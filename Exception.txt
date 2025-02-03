@@ -1,0 +1,37 @@
+public class Main
+{
+	public static void main(String[] args) 
+	{
+		String word = null;
+		int[] numbers = {1, 2, 3, 4, 5};
+		
+		try
+		{
+		    System.out.println("Length of the word: "+word.length());
+		}
+		
+		catch(NullPointerException e)
+		{
+		    System.out.println("Null Pointer Exception Raised. ");
+		}
+		finally
+		{
+		    System.out.println("Finally block executed after Null Pointer Exception.");
+		}
+		
+		try
+		{
+		    System.out.println("The element at Index 5: "+numbers[8]);
+		}
+		
+		catch(ArrayIndexOutOfBoundsException d)
+		{
+		    System.out.println("The accessing index is out of bound.");
+		}
+		
+		finally
+		{
+		    System.out.println("Finally block executed after Array Index Out Of Bounds Exception.");
+		}
+	}
+}
