@@ -1,0 +1,25 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[])
+    {
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(123);
+        numbers.add(546);
+        numbers.add(813);
+        numbers.add(495);
+        numbers.add(301);
+        System.out.println("Array List of numbers: "+numbers);
+        
+        numbers.remove(3);
+        System.out.println("\nAfter removing 3rd element, numbers: "+numbers);
+        numbers.set(2,786);
+        System.out.println("\nUpdating second element with new value,the numbers: "+numbers);
+        
+        Iterator<Integer> iterator = numbers.iterator();
+        System.out.println("\nDisplay the ArrayList of Integers:");
+        while(iterator.hasNext())
+        {
+            System.out.println(iterator.next());
+        }
+    }
+}
