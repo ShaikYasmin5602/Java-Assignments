@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		HashMap<Integer,String> studentDetails = new HashMap<>();
+		studentDetails.put(1,"ABC");
+		studentDetails.put(2,"PQR");
+		studentDetails.put(3,"XYZ");
+		studentDetails.put(4,"DEF");
+		studentDetails.put(5,"RST");
+		System.out.println("Students Data:\n"+studentDetails);
+		
+		int rollNumtoSearch = 2;
+		String studentName = studentDetails.get(rollNumtoSearch);
+		if(studentName != null)
+		{
+		    System.out.println("\nStudent with roll number "+rollNumtoSearch+ " is " +studentName);
+		}
+		else
+		{
+		    System.out.println("Student with roll number "+rollNumtoSearch+ " not found");
+		}
+		
+		studentDetails.remove(4);
+		System.out.println("\nAfter removing a student data:\n"+studentDetails);
+		
+		System.out.println("\nDisplaying Student Details:");
+		for(Map.Entry<Integer, String> entry : studentDetails.entrySet())
+		{
+		    System.out.println("Roll Number: "+entry.getKey()+ " Name: "+entry.getValue());
+		}
+	}
+}
