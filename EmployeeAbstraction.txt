@@ -1,0 +1,45 @@
+
+abstract class Employee{
+	abstract public double calculateSalary();
+	abstract public void displayDetails();
+}
+class FullTimeEmployee extends Employee{
+	double monthlysalary;
+	public FullTimeEmployee(double montlysalary) {
+		this.monthlysalary=montlysalary;
+	}
+	public double calculateSalary() {
+		return monthlysalary;
+	}
+	public void displayDetails() {
+		System.out.print("full time employee ");
+		System.out.println("montlysalary: "+monthlysalary);
+	}
+}
+class PartTimeEmployee extends Employee{
+	int hourlySalary;
+	public PartTimeEmployee(int hourlySalary) {
+		this.hourlySalary=hourlySalary;
+	}
+	public double calculateSalary() {
+		return hourlySalary;
+	}
+	public void displayDetails() {
+		System.out.print("part time employee ");
+		System.out.println("hourlySalary: "+hourlySalary);
+	}
+}
+
+public class Main {
+	public static void main(String[] args) {
+			Employee[] emp=new Employee[4];
+			emp[0]=new FullTimeEmployee(7200);
+			emp[1]=new PartTimeEmployee(1000);
+			emp[2]=new FullTimeEmployee(3500);
+			emp[3]=new PartTimeEmployee(6000);
+			for (Employee e: emp) {
+				e.displayDetails();
+			}
+			
+	}
+}
