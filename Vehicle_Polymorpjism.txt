@@ -1,0 +1,33 @@
+abstract class Vehicle
+{
+    public abstract void startEngine();
+};
+
+class Car extends Vehicle
+{
+    @Override
+    public void startEngine()
+    {
+        System.out.println("Car Engine is started.");
+    }
+};
+
+class MotorCycle extends Vehicle
+{
+    @Override
+    public void startEngine()
+    {
+        System.out.println("MotorCycle Engine is started.");
+    }
+};
+
+public class Main
+{
+	public static void main(String[] args) {
+		Car c1 = new Car();
+		c1.startEngine();
+		
+		MotorCycle m1 = new MotorCycle();
+		m1.startEngine();
+	}
+}
