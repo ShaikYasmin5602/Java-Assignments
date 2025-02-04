@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+		HashSet<String> cities = new HashSet<>();
+		cities.add("Nellore");
+		cities.add("Kadapa");
+		cities.add("Vijayawada");
+		cities.add("Kadapa");
+		cities.add("Hyderabad");
+		
+		System.out.println("Display the City names without duplicates:\n"+cities);
+		
+		boolean result = cities.contains("Vijayawada");
+		System.out.println("\nDoes Vijayawada city exist in Hashset? "+result);
+		
+		cities.remove("Nellore");
+		System.out.println("\nUpdated Cities names:\n"+cities);
+	}
+}
