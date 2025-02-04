@@ -1,0 +1,40 @@
+abstract class Shape
+{
+    public abstract void draw();
+};
+class Circle extends Shape
+{
+    @Override
+    public void draw()
+    {
+        System.out.println("Drawing a Circle.");
+    }
+};
+class Rectangle extends Shape
+{
+    @Override
+    public void draw()
+    {
+        System.out.println("Drawing a Rectangle.");
+    }
+};
+public class Main
+{
+	public static void main(String[] args)
+	{
+		Shape[] s1 = new Shape[5];
+		s1[0] = new Circle();
+		s1[1] = new Rectangle();
+		s1[2] = new Rectangle();
+		s1[3] = new Circle();
+		s1[4] = new Rectangle();
+		
+		for(Shape item: s1)
+		{
+		    item.draw();
+		}
+	}
+}
+
+
+
