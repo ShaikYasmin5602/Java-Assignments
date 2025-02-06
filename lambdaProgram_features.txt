@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main
+{
+    
+    interface StringProcessor
+    {
+        String process(String str);
+    }
+	public static void main(String[] args) 
+	{
+		List<String> fruits = Arrays.asList("Apple","Banana","Cherry","Orange","Pomegranate");
+        	System.out.println("List of data: ");
+		fruits.forEach(item -> System.out.println(item));
+		
+		System.out.println("\nAfter reversing the list of data: ");
+		fruits.sort(Comparator.reverseOrder());
+		fruits.forEach(it1 -> System.out.println(it1));
+		
+		StringProcessor toUpperCaseConversion = (str) -> str.toUpperCase();
+		System.out.println("\nAfter Converting fruits names to Uppercases: ");
+		for(String item: fruits)
+		{
+		    System.out.println(toUpperCaseConversion.process(item));
+		}
+	}
+}
