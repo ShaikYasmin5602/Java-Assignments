@@ -1,0 +1,35 @@
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class Calculate
+{
+    public static int addition(int a, int b)
+    {
+        return a+b;
+    }
+}
+
+public class CalculateAdd 
+{
+    @BeforeEach
+    public void getBefore()
+    {
+        System.out.println("Before Each test case...");
+    }
+    @Test
+    public void add()
+    {
+        assertEquals(30,Calculate.addition(10,20));
+        assertNotEquals(25,Calculate.addition(2,45));
+        System.out.println("Successfully executed.");
+    }    
+    @AfterEach
+    public void getAfter()
+    {
+        System.out.println("After Each test cas...");
+    }
+}
