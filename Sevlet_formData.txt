@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.util.Date" %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Details Form</title>
+    </head>
+    <body>
+        <form action="submissionPage.jsp" method="POST">
+        <h2>Details Form: </h2>
+        <label><b>Name:   </b></label>
+        <input type="text" name="name" placeholder="Enter your name"><br><br>
+
+        <label><b>Email: </b></label>
+        <input type="email" name="email" placeholder="Enter Email address"><br><br>
+
+        <label><b>Message: </b></label>
+        <textarea name="message" placeholder="Type message here"></textarea><br><br>
+
+        <button>Submit</button>
+
+        </form>
+    </body>
+</html>
